@@ -1,0 +1,231 @@
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 16px 40px 16px 40px;
+  gap: 24px;
+  border: 1px solid black;
+  font-size: 12px;
+}
+
+.menuLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0;
+  margin-left: auto;
+  gap: 8px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 96px;
+  border-bottom: 1px solid black;
+}
+
+.headeContentMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid black;
+  height: 96px;
+  width: 96px;
+}
+
+.headeContentSearch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid black;
+  height: 96px;
+  width: 96px;
+}
+
+.menuListContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 96px;
+  padding: 0 15px;
+  border-bottom: 1px solid black;
+}
+
+.menuList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 96px;
+  align-items: center;
+}
+
+.menuListItem {
+  cursor: pointer;
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.menuListItem::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -2px;
+  left: 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.menuListItem.active::after {
+  background-color: #ff2c33;
+}
+
+.menuListItem:hover {
+  color: #555;
+}
+
+.containerToggle {
+  display: flex;
+  align-items: center;
+}
+
+.drawer {
+  position: fixed;
+  top: 150px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: white;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  z-index: 999;
+}
+
+.drawer.open {
+  height: 100%;
+}
+
+.drawerContent {
+  padding: 0;
+}
+
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  padding: 120px 30px 30px 30px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  font-size: 48px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.card span {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.gridContainerLower {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.lowerCard {
+  padding: 40px 40px 40px 40px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .statusBar {
+    background-color: #ffffff;
+    height: 44px;
+  }
+
+  .menu {
+    justify-content: space-evenly;
+    height: 40px;
+    padding: 0 24px 0 24px;
+  }
+
+  .menuLogin {
+    display: none;
+  }
+
+  .vl {
+    border-left: 1px solid black;
+    height: 40px;
+  }
+
+  .header {
+    height: 55px;
+  }
+
+  .headeContentMenu {
+    height: 52px;
+    width: 52px;
+  }
+
+  .headeContentSearch {
+    height: 52px;
+    width: 52px;
+  }
+
+  .menuListContainer {
+    display: none;
+  }
+
+  .menuList {
+    display: none;
+  }
+
+  .containerToggle {
+    display: none;
+  }
+
+  .drawer {
+    top: 142px;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    font-size: 20px;
+    padding-top: 15px;
+    padding: 15px 15px 15px 15px;
+  }
+
+  .gridContainerLower {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .lowerCard {
+    padding: 15px 15px 15px 15px;
+  }
+}

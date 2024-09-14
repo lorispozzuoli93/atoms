@@ -1,0 +1,133 @@
+.newsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 506px;
+  width: 100%;
+}
+
+.newsItem {
+  background-image: url("./../../assets/images/Articolo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.secondBannerGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0;
+  height: 845px;
+  border: 1px solid white;
+}
+
+.bannerItem {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#leftImage {
+  background-image: url("./../../assets/images/ROW_1.png");
+  border-right: 1px solid white;
+}
+
+#rightTopImage {
+  background-image: url("./../../assets/images/ROW_2.png");
+}
+
+#rightBottomImage {
+  background-image: url("./../../assets/images/ROW_3.png");
+}
+
+.bannerItem.large {
+  grid-row: span 2;
+}
+
+.secondBannerGridMobile {
+  display: none;
+}
+
+.thirdBanner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f1de;
+  padding: 84px 40px 84px 40px;
+  gap: 16px;
+  border-top: 1px solid black;
+}
+
+.thirdBanner h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.thirdBanner h3 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.thirdBannerContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .newsGrid {
+    height: 320px;
+  }
+
+  .newsItem {
+    background-image: url("./../../assets/images/ArticoloMobile.png");
+  }
+
+  .secondBannerGrid {
+    height: 456px;
+  }
+
+  #leftImage {
+    background-image: url("../../assets/images/Highlight.png");
+  }
+
+  #rightTopImage {
+    display: none;
+  }
+
+  #rightBottomImage {
+    display: none;
+  }
+
+  .secondBannerGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .bannerItem.large {
+    grid-row: auto;
+  }
+
+  .secondBannerGridMobile {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px 24px 16px;
+    gap: 16px;
+    border-top: 1px solid black;
+  }
+
+  .thirdBanner {
+    flex-direction: column;
+    padding: 32px 16px 32px 16px;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  @media (max-width: 390px) {
+    .podcast {
+      width: 270px;
+    }
+  }
+}
