@@ -3,12 +3,10 @@
   grid-template-columns: 1fr;
   color: white;
   text-align: left;
-  background: rgb(0, 0, 0);
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 0.42629551820728295) 0%,
-    rgba(0, 0, 0, 1) 85%
-  );
+  background-image: url('../../assets/images/soccorsi.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .topImage {
@@ -63,12 +61,10 @@
   flex-direction: column;
   padding: 56px 40px 56px 40px;
   gap: 24px;
-  background: #333030;
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 0.42629551820728295) 0%,
-    rgb(47, 47, 47) 85%
-  );
+  background-image: url('../../assets/images/ghiacciai.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-right: 1px solid white;
 }
 
@@ -79,12 +75,25 @@
   text-align: left;
 }
 
+#rightTopImage {
+  background-image: url('../../assets/images/riunione.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#rightBottomImage {
+  background-image: url('../../assets/images/bandiera.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .rightImage {
   display: flex;
   flex-direction: column;
   padding: 45px;
   gap: 24px;
-  background: #343333;
 }
 
 .leftImage.large {
@@ -121,6 +130,11 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+.podcast {
+  background-color: white;
+  border-radius: 8px;
 }
 
 @media (max-width: 1024px) {

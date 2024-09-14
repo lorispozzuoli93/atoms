@@ -67,12 +67,12 @@ const NewsSection: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className='rightImage'>
+      <div className='rightImage' id='rightTopImage'>
         <div>
           <img src={tag9} alt="Tag9" />
         </div>
         <div>
-          <img src={podcast} alt="Podcast" />
+          <img className="podcast" src={podcast} alt="Podcast" />
         </div>
         <div>
             <h2>Gli startupper? Li trovi al bistrot. Così il DumBo incuba relazioni</h2>
@@ -90,7 +90,7 @@ const NewsSection: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className='rightImage'>
+      <div className='rightImage' id='rightBottomImage'>
         <div>
           <img src={tag10} alt="Tag10" />
         </div>
@@ -116,7 +116,7 @@ const NewsSection: React.FC = () => {
         <img src={tag} alt="Tag" />
       </div>
       <div>
-        <img src={podcast} alt="Podcast" />
+        <img className="podcast" src={podcast} alt="Podcast" />
       </div>
       <div>
         <h2>Gli startupper? Li trovi al bistrot.
