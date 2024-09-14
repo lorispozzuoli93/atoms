@@ -38,14 +38,14 @@
 }
 
 #centerImageSeconSection {
-  background-image: url('../../assets/images/donnapensa.jpg');
+  background-image: url("../../assets/images/donnapensa.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #rightImageSeconSection {
-  background-image: url('../../assets/images/riunione.jpg');
+  background-image: url("../../assets/images/riunione.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -59,22 +59,82 @@
 }
 
 #bottomLeftImageSeconSection {
-  background-image: url('../../assets/images/boxer.jpg');
+  background-image: url("../../assets/images/boxer.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #bottomRightImageSeconSection {
-  background-image: url('../../assets/images/donna.jpg');
+  background-image: url("../../assets/images/donna.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+.alignToRight {
+  width: 50%;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.textBottomRight {
+  font-size: 40px !important;
+  font-weight: 700 !important;
+  line-height: 48px !important;
+  text-align: left;
+  margin-bottom: 120px;
+}
+
+#bottomRightImageSeconSectionMobile {
+  display: none;
+}
+
 .podcast {
   background-color: white;
   border-radius: 8px;
+}
+
+.fourthBanner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url("../../assets/images/sky.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 90px;
+  gap: 24px;
+  border-top: 1px solid black;
+  color: white;
+}
+
+.fourthBanner h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 46px;
+  text-align: left;
+}
+
+.fourthBanner h3 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16.56px;
+}
+
+.fourthBannerContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.quoteIconMobile {
+  display: none;
+}
+
+.quoteIcon svg {
+  margin-bottom: 150px;
 }
 
 @media (max-width: 1024px) {
@@ -85,6 +145,7 @@
   .bannerItem {
     padding: 24px 16px 24px 16px;
     gap: 16px;
+    border-bottom: 1px solid black;
   }
 
   .bannerContent {
@@ -125,5 +186,46 @@
   #bottomLeftImageSeconSection {
     background: white;
     color: black;
+  }
+
+  #bottomRightImageSeconSection {
+    display: none;
+  }
+
+  #bottomRightImageSeconSectionMobile {
+    display: flex;
+    border-bottom: 1px solid black;
+  }
+
+  .fourthBanner {
+    background-image: none;
+    background-color: #f4f4f4;
+    color: black;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .fourthBanner h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  .fourthBanner h3 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14.49px; 
+  }
+
+  .quoteIcon {
+    display: none;
+  }
+
+  .quoteIconMobile{
+    display: flex;
+  }
+
+  .quoteIconMobile svg {
+    margin-bottom: 50px;
   }
 }

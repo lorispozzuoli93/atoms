@@ -1,4 +1,4 @@
-.gridContainer {
+/* .gridContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -11,9 +11,6 @@
   flex-direction: column;
   padding: 56px 40px;
   gap: 24px;
-  background-color: var(
-    --default-background-color
-  );
 }
 
 .bannerItem h2 {
@@ -78,4 +75,4 @@
   .arrow {
     display: none;
   }
-}
+} */

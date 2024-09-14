@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
   }, [drawerOpen, searchDrawerOpen]);
 
   return (
-    <div className="navbar">
+    <div>
        <div className="statusBar"></div>
          <div className="menu">
             <div className="menuItem">Contribuisci</div>

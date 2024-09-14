@@ -1,0 +1,100 @@
+.gridContainerFifth {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gridContentFifth {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.gridContentFifthRight {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.gridItemFifth {
+  color: white;
+  padding: 40px 30px;
+}
+
+.gridItemWrapperFitfh {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gridItemTextFifth {
+  display: flex;
+  flex-direction: column;
+}
+
+.gridItemFifth h2 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: left;
+}
+
+#topImageFiftItem {
+  background-image: url("../../assets/images/anziani.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#centerFirstImageFiftItem {
+  background-image: url("../../assets/images/emergency.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#centerBottomImageFiftItem {
+  background-image: url("../../assets/images/fruit.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#bottomImageFiftItem {
+  background-image: url("../../assets/images/store.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#leftImageSeconSectionFifth {
+  color: white;
+  background-image: url("../../assets/images/citta.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bannerItemFifth {
+  display: flex;
+  flex-direction: column;
+  padding: 56px 40px 56px 40px;
+  gap: 24px;
+  margin-top: 420px;
+}
+
+.bannerItemFifth h2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 46px;
+}
+
+@media (max-width: 1024px) {
+  .gridContainerFifth {
+    display: none;
+  }
+}
