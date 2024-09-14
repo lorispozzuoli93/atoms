@@ -109,6 +109,26 @@
   z-index: 999;
 }
 
+.searchDrawer {
+  position: fixed;
+  top: 150px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: white;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  z-index: 999;
+}
+
+.searchDrawer.open {
+  height: 100%;
+}
+
+.searchDrawerContent {
+  padding: 0;
+}
+
 .drawer.open {
   height: 100%;
 }
@@ -117,6 +137,11 @@
   padding: 0;
 }
 
+.gridContainerSearchDrawer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-right: 1px solid black;
+}
 
 .gridContainer {
   display: grid;
@@ -133,6 +158,54 @@
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  color: black;
+}
+
+.cardSearch {
+  padding: 80px 40px 80px 40px;
+  gap: 24px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  font-size: 48px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  height: 100vh;
+}
+
+.searchBotton {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.searchWrapper {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.searchInput {
+  font-size: 36px;
+  font-weight: 200;
+  color: white;
+  border: none;
+  outline: none;
+  flex: 1;
+  background: transparent;
+  padding: 0;
+  color: black;
+}
+
+.searchDescription {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  font-style: italic;
+  margin-top: 10px;
 }
 
 .card span {
@@ -227,5 +300,13 @@
 
   .lowerCard {
     padding: 15px 15px 15px 15px;
+  }
+
+  .gridContainerSearchDrawer {
+    grid-template-columns: 1fr;
+  }
+
+  .cardSearch {
+    height: 25vh;
   }
 }

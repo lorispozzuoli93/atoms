@@ -17,3 +17,12 @@ body {
   height: 100%;
   margin: 0;
 }
+
+svg {
+  cursor: pointer;
+}
+
+.drawer-open {
+  /* Example: lock the page scroll when the drawer is open */
+  overflow: hidden;
+}

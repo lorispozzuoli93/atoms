@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './Navbar.css'; 
 import AccountIcon from "../../assets/Icons/AccountIcon";
 import MenuIcon from "../../assets/Icons/MenuIcon";
 import SearchIcon from "../../assets/Icons/SearchIcon";
 import ToggleIcon from "../../assets/Icons/ToogleIcon";
 import CancelIcon from "../../assets/Icons/CancelIcon";
+import RightArrowIcon from "../../assets/Icons/RightArrowIcon";
 
 const menuItems = [
     "Tutti i temi",
@@ -19,6 +20,7 @@ const menuItems = [
 
 const Navbar: React.FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [searchDrawerOpen, setSearchDrawerOpen] = useState(false);
   const [activeItem, setActiveItem] = useState<string>(menuItems[0]);
 
   const handleItemClick = (item: string) => {
@@ -29,8 +31,26 @@ const Navbar: React.FC = () => {
     setDrawerOpen(!drawerOpen);
   };
 
+  const handleSearchDrawerToggle = () => {
+    setSearchDrawerOpen(!searchDrawerOpen);
+  };
+
+  // Effect to toggle class on body or html element
+  useEffect(() => {
+    if (drawerOpen || searchDrawerOpen) {
+      document.body.classList.add('drawer-open'); // Add class to body (or html)
+    } else {
+      document.body.classList.remove('drawer-open'); // Remove class when closed
+    }
+
+    // Clean up on unmount
+    return () => {
+      document.body.classList.remove('drawer-open');
+    };
+  }, [drawerOpen, searchDrawerOpen]);
+
   return (
-    <div>
+    <div className="navbar">
        <div className="statusBar"></div>
          <div className="menu">
             <div className="menuItem">Contribuisci</div>
@@ -42,15 +62,18 @@ const Navbar: React.FC = () => {
             </div>
         </div>
         <div className="header">
-            <div className="headeContentMenu" onClick={handleDrawerToggle}>
-                {drawerOpen ? <CancelIcon/> : <MenuIcon/>}
-            </div>
+            {!searchDrawerOpen && (
+              <div className="headeContentMenu" onClick={handleDrawerToggle}>
+                  {drawerOpen ? <CancelIcon/> : <MenuIcon/>}
+              </div>
+            )}
             {!drawerOpen && (
-            <div className="headeContentSearch">
-                 <SearchIcon/>
-            </div>
+              <div className="headeContentSearch searchBotton" onClick={handleSearchDrawerToggle}>
+                {searchDrawerOpen ? <CancelIcon/>  : <SearchIcon/>}
+              </div>
             )}
         </div>
+        {/* Menu Drawer */}
         <div className={`drawer ${drawerOpen ? 'open' : ''}`}>
           <div className="drawerContent">
             <div className="gridContainer">
@@ -71,6 +94,28 @@ const Navbar: React.FC = () => {
             </div>
           </div>
         </div>
+         {/* Search Drawer */}
+         <div className={`searchDrawer ${searchDrawerOpen ? 'open' : ''}`}>
+          <div className="searchDrawerContent">
+            <div className="gridContainerSearchDrawer">
+            <div className="cardSearch">
+            <div className="searchWrapper">
+              <input
+                type="text"
+                className="searchInput"
+                placeholder="Cerca"
+              />
+              <RightArrowIcon />
+            </div>
+              <p className="searchDescription">
+                Cerca nel sito articoli, storie, interviste ed eventi
+              </p>
+            </div>
+            <div className="cardSearch"></div>
+            </div>
+          </div>
+        </div>
+        
         <div className="menuListContainer">
             <ul className="menuList">
             {menuItems.map((item) => (
